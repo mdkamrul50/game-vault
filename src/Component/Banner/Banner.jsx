@@ -12,7 +12,7 @@ const Banner = () => {
     <div className="bg-[#052416] ">
       <div className="container mx-auto pt-18 pb-12 px-2 ">
         <div className="flex justify-between items-center">
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-8 items-center  fade-up delay-1">
             <p className="text-xl font-semibold">Play | Earn | Enjoy</p>
             <div className="border border-[#1baf6c] pl-20 pr-1 rounded-full flex justify-end overflow-hidden">
               <div
@@ -24,7 +24,7 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 opacity-85">
+          <div className="flex items-center gap-3 opacity-85 fade-up delay-1">
             <i class="fa-solid fa-arrow-right pt-px text-5xl"></i>
             <p className="text-6xl font-bold border-r-4 pr-2 ">4.5</p>
             <div className="text-2xl text-green-500">
@@ -36,7 +36,7 @@ const Banner = () => {
               <p className="font-semibold text-[#25E791]">19K Reviews</p>
             </div>
           </div>
-          <div className="border border-[#15a664] p-20  rounded-full  relative flex justify-center items-center opacity-75">
+          <div className="border border-[#15a664] p-20  rounded-full  relative flex justify-center items-center opacity-75  fade-up delay-1">
             <span className="p-4 py-5 bg-linear-to-r from-[#0e7d4b] to-cyan-600 rounded-full absolute z-10">
               <i className="fa-solid fa-arrow-right pt-px -rotate-28 text-2xl"></i>
             </span>
@@ -61,11 +61,11 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flex ">
           <div className="absolute inset-0 h-100 left-60 top-28 w-90  bg-green-700 opacity-30 blur-3xl"></div>
 
-          <div>
-            <h2 className="text-6xl font-bold py-3">
+          <div className=" fade-left">
+            <h2 className="text-6xl font-bold py-3 ">
               Build Your <span className="text-[#1dd576]">Ultimate Game</span>{' '}
               Library
             </h2>{' '}
@@ -77,14 +77,14 @@ const Banner = () => {
                 Game <span className="text-cyan-500">Vault</span>
               </span>
             </div>
-            <p className="text-gray-400 mt-8 font-semibold">
+            <p className="text-gray-400 mt-8 font-semibold fadeRight">
               Discover, save and organize your favorite games Create your own
               gaming collection <br /> in seconds Add games, track favorites,
               and manage your library A modern React app <br /> for game
               lovers,All Your Games in One Place
             </p>
           </div>
-          <div className="flex mr-20 absolute right-50 ">
+          <div className="flex mr-20 absolute right-50 fade-right">
             <div className=" h-110 w-100 mt-26 bg-[#12291e] overflow-hidden rounded-l-2xl">
               <img className="pt-4" src={Banner1} alt="" />
             </div>
@@ -107,7 +107,7 @@ const Banner = () => {
             How It's Work?
           </button>
         </div>
-        <div className="flex mt-10 pl-35 relative mb-8">
+        <div className="flex mt-10 pl-35 relative mb-8 fade-up delay-1">
           <div className="  rounded-full overflow-hidden">
             <img
               className="object-cover h-12 rounded-full w-12 "

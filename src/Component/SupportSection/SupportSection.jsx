@@ -53,11 +53,12 @@ const SupportSection = () => {
             </div>
             <div className=" text-center mt-4 pl-45 flex">
               <img className="h-20 -rotate-35" src={Line} alt="" />
-              <button className="btn text-center ml-10 rounded-full px-8 border-none bg-[#169c60]">
+              <button className="btn text-center ml-10 rounded-full px-8 border-none bg-[#169c60] shadow-lg shadow-[#048966]">
                 More About <i class="fa-solid fa-location-arrow"></i>
               </button>
               <div className="absolute inset-0 h-70 left-270 -top-10 w-90  bg-green-600 opacity-30 blur-3xl"></div>
               <div className="absolute inset-0 h-70 left-210 top-120 w-50  bg-green-950 opacity-30 blur-3xl z-50"></div>
+              <div className="absolute inset-0 h-70 left-360 top-120 w-50  bg-green-950 opacity-30 blur-3xl z-50"></div>
               <div className="absolute inset-0 h-100 left-5 top-100 w-80  bg-green-950 opacity-30 blur-3xl z-50"></div>
             </div>
           </div>

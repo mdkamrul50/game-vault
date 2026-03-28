@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="absolute inset-0 h-50 left-0 top-0 w-70  bg-green-500 opacity-30 blur-3xl"></div>
+          <div className="absolute inset-0 h-50 left-0 top-0 w-70  bg-green-900 opacity-30 blur-3xl"></div>
           <div>
             <h6 className="text-white font-semibold mb-4">Categories</h6>
             <ul className="space-y-2">
@@ -73,7 +73,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className='z-60'>
+          <div className="z-60">
             <h6 className="text-white font-semibold mb-4">Follow Us</h6>
             <div className="flex gap-4">
               <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#25E791] hover:text-black transition">

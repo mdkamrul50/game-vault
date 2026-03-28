@@ -6,8 +6,8 @@ import NavLogo from "../../assets/logo.jpg";
 const Navber = () => {
   return (
     <>
-      <div className=" bg-linear-to-r from-[#0a5f39] to-cyan-800">
-        <div className="navbar shadow-sm container mx-auto mt-3 flex justify-between">
+      <div className=" bg-linear-to-r from-[#0a5f39] to-cyan-800 sticky top-1 z-90">
+        <div className="navbar shadow-sm container mx-auto mt-3 flex justify-between ">
           <div className="flex gap-2 items-center">
             <img className="h-12 w-12 rounded-xl" src={NavLogo} alt="" />
             <h1 className="text-3xl font-bold italic text-[#25E791]">
