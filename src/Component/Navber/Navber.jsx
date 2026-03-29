@@ -1,5 +1,6 @@
 import React from 'react'
 import NavLogo from "../../assets/logo.jpg";
+import AvaTer3 from '../../assets/avater-3.jpg';
 
 
 
@@ -39,7 +40,7 @@ const Navber = () => {
           </div>
 
           <div className="flex-none">
-            <button className="btn bg-[#25E791] border-none rounded-full text-black px-4 mr-3 hover:bg-[#0c5b37] hover:text-white">
+            <button className="btn bg-[#1fc178] border-none rounded-full text-black px-4 mr-3 hover:bg-[#0c5b37] hover:text-white">
               {' '}
               <i class="fa-solid fa-arrow-right-from-bracket"></i> Log In
             </button>
@@ -52,26 +53,27 @@ const Navber = () => {
               >
                 <div className="w-10 rounded-full">
                   <img
+                    className="object-cover "
                     alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    src={AvaTer3}
                   />
                 </div>
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-linear-to-r from-[#0c7546] to-cyan-600 rounded-box z-1 mt-3 w-52 p-2 shadow "
               >
                 <li>
                   <a className="justify-between">
                     Profile
-                    <span className="badge">New</span>
+                    <span className="badge bg-[#052416]">New</span>
                   </a>
                 </li>
                 <li>
                   <a>Settings</a>
                 </li>
                 <li>
-                  <a>Logout</a>
+                  <a>Info</a>
                 </li>
               </ul>
             </div>

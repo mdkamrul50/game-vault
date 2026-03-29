@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CardBg from "../assets/banner.jpg";
 
 const AvailableGame = ({ Games }) => {
   const [selectedGames, setSelectedGames] = useState([]);
@@ -16,17 +17,24 @@ const AvailableGame = ({ Games }) => {
           return (
             <div
               key={game.id}
-              className="card bg-[#073720] shadow-lg hover:bg-[#0a5430] hover:scale-101 transition-all duration-300"
+              className="card group relative overflow-hidden shadow-lg hover:bg-[#073620]  rounded-3xl :"
             >
-              <figure>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 z-0">
                 <img
-                  className="h-80 object-cover"
+                  src={CardBg}
+                  alt=""
+                  className="w-full h-full object-cover opacity-70 blur-2xl"
+                />
+              </div>
+              <figure className="overflow-hidden">
+                <img
+                  className="h-80 object-cover group-hover:scale-105 transition-all duration-500"
                   src={game.background_image}
                   alt=""
                 />
               </figure>
 
-              <div className="card-body py-8">
+              <div className="card-body py-5 z-10">
                 <h2 className="card-title text-2xl text-gray-300">
                   {game.name}
                 </h2>

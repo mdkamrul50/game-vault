@@ -20,13 +20,13 @@ const Game = ({ gamePromise }) => {
           <div className="">
             <button
               onClick={() => setSelectedBtn('Available')}
-              className={`btn btn-outline ${selectedBtn === 'Available' ? 'bg-white text-black' : ''} px-6 mr-2`}
+              className={`btn btn-outline ${selectedBtn === 'Available' ? 'bg-white text-black' : ''} px-6 mr-1 rounded-l-full border-none`}
             >
               Available
             </button>
             <button
               onClick={() => setSelectedBtn('Selected')}
-              className={`btn btn-outline px-6 ${selectedBtn === 'Selected' ? 'bg-white text-black' : ''}`}
+              className={`btn btn-outline px-6 ${selectedBtn === 'Selected' ? 'bg-white text-black' : ''} rounded-r-full border-none`}
             >
               Selected
             </button>
