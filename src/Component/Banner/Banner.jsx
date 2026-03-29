@@ -25,14 +25,14 @@ const Banner = () => {
           </div>
 
           <div className="flex items-center gap-3 opacity-85 fade-up delay-1">
-            <i class="fa-solid fa-arrow-right pt-px text-5xl"></i>
+            <i className="fa-solid fa-arrow-right pt-px text-5xl"></i>
             <p className="text-6xl font-bold border-r-4 pr-2 ">4.5</p>
             <div className="text-2xl text-green-500">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <i className="fa-regular fa-star"></i>
+              <i className="fa-regular fa-star"></i>
+              <i className="fa-regular fa-star"></i>
+              <i className="fa-regular fa-star"></i>
+              <i className="fa-solid fa-star-half-stroke"></i>
               <p className="font-semibold text-[#25E791]">19K Reviews</p>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Banner = () => {
             />
           </div>
           <div className="  rounded-full overflow-hidden absolute left-43">
-            <i class="fa-solid fa-circle-user text-5xl"></i>
+            <i className="fa-solid fa-circle-user text-5xl"></i>
           </div>
           <div className=" border rounded-full overflow-hidden absolute left-51">
             <img

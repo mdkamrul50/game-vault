@@ -23,14 +23,14 @@ const AvailableGame = ({ Games }) => {
                 <img
                   src={CardBg}
                   alt=""
-                  className="w-full h-full object-cover opacity-70 blur-2xl"
+                  className="w-full h-full object-cover  blur-2xl"
                 />
               </div>
               <figure className="overflow-hidden">
                 <img
                   className="h-80 object-cover group-hover:scale-105 transition-all duration-500"
                   src={game.background_image}
-                  alt=""
+                  alt="game background"
                 />
               </figure>
 
@@ -39,14 +39,13 @@ const AvailableGame = ({ Games }) => {
                   {game.name}
                 </h2>
 
-                <p>{game.released}</p>
+                <p className="font-semibold text-gray-400 italic">{game.released}</p>
 
-                <span className="font-semibold text-blue-700 text-xl">
-                  prices: $20
-                </span>
+               
 
-                <div className="flex justify-between items-center text-xl p-2 text-lime-300 rounded-xl bg-[#0a613a]">
-                  <p>Rating:</p>⭐ 4.5
+                <div className="flex justify-between items-center text-xl p-2 text-yellow-600 rounded-xl bg-[#073c24]">
+                  <p className='text-green-600'>Rating:</p> <i className="fa-regular fa-star"></i>{' '}
+                  {game.rating.toFixed(1)}
                 </div>
 
                 <div className="card-actions flex items-center justify-between">

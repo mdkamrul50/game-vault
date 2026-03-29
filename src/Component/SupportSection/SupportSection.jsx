@@ -42,19 +42,19 @@ const SupportSection = () => {
             <div className="flex items-center gap-5 text-center  justify-center">
               <div className="flex items-center ">
                 <p className=" p-3 rounded-xl bg-gray-700 flex items-center gap-2 font-bold text-gray-300">
-                  <i class="fa-solid fa-gamepad rounded-2xl px-3 mr-2 bg-green-200 text-green-600 text-2xl"></i>{' '}
+                  <i className="fa-solid fa-gamepad rounded-2xl px-3 mr-2 bg-green-200 text-green-600 text-2xl"></i>{' '}
                   Easy To Play
                 </p>
               </div>
               <div className="p-3 rounded-xl bg-gray-700 flex items-center gap-2 font-bold text-gray-300">
-                <i class="fa-solid fa-headset text-2xl text-green-500"></i>
+                <i className="fa-solid fa-headset text-2xl text-green-500"></i>
                 24H Support
               </div>
             </div>
             <div className=" text-center mt-4 pl-45 flex">
               <img className="h-20 -rotate-35" src={Line} alt="" />
               <button className="btn text-center ml-10 rounded-full px-8 border-none bg-[#169c60] shadow-lg shadow-[#048966]">
-                More About <i class="fa-solid fa-location-arrow"></i>
+                More About <i className="fa-solid fa-location-arrow"></i>
               </button>
               <div className="absolute inset-0 h-70 left-270 -top-10 w-90  bg-green-600 opacity-30 blur-3xl"></div>
               <div className="absolute inset-0 h-70 left-210 top-120 w-50  bg-green-950 opacity-30 blur-3xl z-50"></div>
