@@ -76,7 +76,7 @@ const Footer = () => {
           <div className="z-60">
             <h6 className="text-white font-semibold mb-4">Follow Us</h6>
             <div className="flex gap-4">
-              <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#25E791] hover:text-black transition">
+              <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#0f5d3a] hover:text-black transition">
                 <svg
                   className="hover:cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ const Footer = () => {
                 </svg>
               </a>
 
-              <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#25E791] hover:text-black transition">
+              <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#0d5535] hover:text-black transition">
                 <svg
                   className="hover:cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const Footer = () => {
                 </svg>
               </a>
 
-              <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#25E791] hover:text-black transition">
+              <a className="p-2 rounded-full bg-[#0f0f0f] hover:bg-[#0c4c2f] hover:text-black transition">
                 <svg
                   className="hover:cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"

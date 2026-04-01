@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CardBg from "../assets/banner.jpg";
+import { toast } from 'react-toastify';
 
 const AvailableGame = ({ Games, library, setLibrary }) => {
   const [selectedGames, setSelectedGames] = useState([]);
@@ -12,6 +13,13 @@ const handleSelect = (game) => {
     if (exists) return prev;
     return [...prev, game];
   });
+toast.success('Added to Library', {
+  style: {
+    background: 'linear-gradient(to right, #1b7a52, #22d3ee)', // lighter version
+    color: '#fff',
+    borderRadius: '10px',
+  },
+});
 };
 
   return (
@@ -49,7 +57,7 @@ const handleSelect = (game) => {
                   {game.released}
                 </p>
 
-                <div className="flex justify-between items-center text-xl p-2 text-yellow-600 rounded-xl bg-[#073c24]">
+                <div className="flex justify-between items-center text-xl p-2 text-yellow-600 rounded-xl bg-[#062c1a]">
                   <p className="text-green-600">Rating:</p>{' '}
                   <i className="fa-regular fa-star"></i>{' '}
                   {game.rating.toFixed(1)}

@@ -13,7 +13,7 @@ const Banner = () => {
       <div className="container mx-auto pt-18 pb-12 px-2 ">
         <div className="flex justify-between items-center">
           <div className="flex gap-8 items-center  fade-up delay-1">
-            <p className="text-xl font-semibold">Play | Earn | Enjoy</p>
+            <p className="text-xl font-semibold ">Play | Earn | Enjoy</p>
             <div className="border border-[#1baf6c] pl-20 pr-1 rounded-full flex justify-end overflow-hidden">
               <div
                 className="h-12 px-4 flex items-center rounded-full bg-linear-to-r from-[#0b7545] to-cyan-700 text-2xl 
@@ -36,7 +36,7 @@ const Banner = () => {
               <p className="font-semibold text-[#25E791]">19K Reviews</p>
             </div>
           </div>
-          <div className="border border-[#15a664] p-20  rounded-full  relative flex justify-center items-center opacity-75  fade-up delay-1">
+          <div className="border border-[#15a664] p-20  rounded-full  relative flex justify-center items-center opacity-75  fade-up delay-1 ">
             <span className="p-4 py-5 bg-linear-to-r from-[#0e7d4b] to-cyan-600 rounded-full absolute z-10">
               <i className="fa-solid fa-arrow-right pt-px -rotate-28 text-2xl"></i>
             </span>
@@ -48,7 +48,11 @@ const Banner = () => {
                   d="M150,150 m-100,0 a100,100 0 1,1 200,0 a100,100 0 1,1 -200,0"
                 />
               </defs>
-              <text fontSize="35" fill="#ffff">
+              <text
+                fontSize="35"
+                fill="#ffff"
+                className=" animate-[pulse_2s_ease-in-out_infinite]"
+              >
                 <textPath
                   href="#circlePath"
                   startOffset="60%"
@@ -139,8 +143,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };
