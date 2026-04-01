@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import './App.css';
 import Banner from './Component/Banner/Banner';
 import Game from './Component/Gamess/Game';
@@ -6,6 +6,7 @@ import Navber from './Component/Navber/Navber';
 import SupportSection from './Component/SupportSection/SupportSection';
 import Footer from './Component/Footer/footer';
 import divider from 'daisyui/components/divider';
+import SelectedGame from './SelectedGame/SelectedGame';
 
 
 const loadGame = async () => {
@@ -15,8 +16,14 @@ const loadGame = async () => {
   return res.json();
 };
 
+
+
+
 function App() {
-  const gamePromise = loadGame();
+  const [library, setLibrary] = useState([]);
+  
+  const gamePromise = useMemo(() => loadGame(), []);
+
   return (
     <>
       <Navber></Navber>
@@ -30,8 +37,13 @@ function App() {
           </div>
         }
       >
-        <Game gamePromise={gamePromise}></Game>
+        <Game
+          gamePromise={gamePromise}
+          library={library}
+          setLibrary={setLibrary}
+        ></Game>
       </Suspense>
+    
       <SupportSection></SupportSection>
       <Footer></Footer>
     </>

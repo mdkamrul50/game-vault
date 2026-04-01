@@ -2,9 +2,9 @@ import React, { use, useState } from 'react';
 import AvailableGame from '../../AvailableGame/AvailableGame';
 import SelectedGame from '../../SelectedGame/SelectedGame';
 
-
-const Game = ({ gamePromise }) => {
+const Game = ({ gamePromise , library, setLibrary }) => {
   const data = use(gamePromise);
+ 
 
   const Games = data.results;
   const [selectedBtn, setSelectedBtn] = useState('Available');
@@ -12,7 +12,7 @@ const Game = ({ gamePromise }) => {
   return (
     <>
       <div className="bg-[#054125] rounded-2xl">
-        <div className="flex justify-between container mx-auto my-4  ">
+        <div className="flex justify-between container mx-auto my-2  ">
           <h2 className="text-3xl font-semibold">
             {' '}
             {selectedBtn === 'Available' ? 'Available Games' : 'Selected Game'}
@@ -34,9 +34,13 @@ const Game = ({ gamePromise }) => {
         </div>
       </div>
       {selectedBtn === 'Available' ? (
-        <AvailableGame Games={Games}></AvailableGame>
+        <AvailableGame
+          Games={Games}
+          library={library}
+          setLibrary={setLibrary}
+        ></AvailableGame>
       ) : (
-        <SelectedGame></SelectedGame>
+        <SelectedGame library={library}></SelectedGame>
       )}
     </>
   );

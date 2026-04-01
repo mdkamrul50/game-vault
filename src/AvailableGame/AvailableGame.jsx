@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import CardBg from "../assets/banner.jpg";
 
-const AvailableGame = ({ Games }) => {
+const AvailableGame = ({ Games, library, setLibrary }) => {
   const [selectedGames, setSelectedGames] = useState([]);
 
-  const handleSelect = (id) => {
-    setSelectedGames((prev) => [...prev, id]);
-  };
+const handleSelect = (game) => {
+  setSelectedGames((prev) => [...prev, game.id]);
+
+  setLibrary((prev) => {
+    const exists = prev.find((item) => item.id === game.id);
+    if (exists) return prev;
+    return [...prev, game];
+  });
+};
 
   return (
     <div className="bg-[#052416] pb-15">
@@ -39,12 +45,13 @@ const AvailableGame = ({ Games }) => {
                   {game.name}
                 </h2>
 
-                <p className="font-semibold text-gray-400 italic">{game.released}</p>
-
-               
+                <p className="font-semibold text-gray-400 italic">
+                  {game.released}
+                </p>
 
                 <div className="flex justify-between items-center text-xl p-2 text-yellow-600 rounded-xl bg-[#073c24]">
-                  <p className='text-green-600'>Rating:</p> <i className="fa-regular fa-star"></i>{' '}
+                  <p className="text-green-600">Rating:</p>{' '}
+                  <i className="fa-regular fa-star"></i>{' '}
                   {game.rating.toFixed(1)}
                 </div>
 
@@ -56,7 +63,8 @@ const AvailableGame = ({ Games }) => {
                   </div>
 
                   <button
-                    onClick={() => handleSelect(game.id)}
+                    onClick={() => handleSelect(game)}
+                    // onClick={() => setLibrary(game.id)}
                     className="btn bg-linear-to-r from-[#108450] to-cyan-700 border-none rounded-2xl"
                   >
                     {isSelected ? 'Added' : 'Add To Library'}

@@ -103,7 +103,7 @@ const Banner = () => {
           <button className="btn bg-linear-to-r from-[#0c7546] to-cyan-600 px-6 text-black rounded-full font-semibold border-none  animate-bounce">
             Explore More
           </button>
-          <button className="btn btn-outline rounded-xl border-none underline font-semibold text-xl">
+          <button className="btn bg-transparent rounded-xl  border-2 border-b-emerald-800 underline font-semibold ">
             How It's Work?
           </button>
         </div>
