@@ -42,7 +42,7 @@ const Navber = () => {
           <div className="flex-none">
             <button className="btn bg-[#1fc178] border-none rounded-full text-black px-4 mr-3 hover:bg-[#0c5b37] hover:text-white">
               {' '}
-              <i className="fa-solid fa-arrow-right-from-bracket"></i> Log In
+              <i className="fa-solid fa-arrow-right-from-bracket"></i> Log Out
             </button>
             <div className="dropdown dropdown-end"></div>
             <div className="dropdown dropdown-end">

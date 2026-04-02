@@ -1,15 +1,36 @@
 import React from 'react';
 
 const SelectedGame = ({ library }) => {
-  console.log(library);
-
+  // console.log(library);
+  const PricesDAta = library.map((l) => ({ ...l, price: 5 }));
+  console.log(PricesDAta);
+  let sum = 0;
+  for (let Pri of PricesDAta) {
+    sum = Pri.price + sum;
+  }
+  console.log(sum);
   return (
     <div className="bg-[#052416] py-20  pb-40 ">
       <div className="container mx-auto bg-[#0b3f28] p-6 rounded-3xl shadow-sm">
-        <h2 className="pl-2 text-2xl font-semibold pb-4 "> SelectedPlayer</h2>
+        <h2 className="pl-2 text-2xl font-semibold pb-4 bg-linear-to-r from-[#739911] to-cyan-600 bg-clip-text text-transparent">
+          {' '}
+          SelectedPlayer
+        </h2>
+
+        {PricesDAta.length === 0 && (
+          <div className="text-center py-10 space-y-2 shadow-sm bg-[#0b3a24] rounded-2xl">
+            <p className="text-4xl font-bold text-gray-300">
+              <i class="fa-brands fa-opencart"></i>
+            </p>
+            <p className="text-2xl font-semibold text-gray-400">Empty Cart</p>
+            <p className="text-2xl font-semibold text-gray-400">
+              Please Select Cart
+            </p>
+          </div>
+        )}
 
         <div className="container mx-auto grid grid-cols-4 items-center gap-4">
-          {library.map((item) => (
+          {PricesDAta.map((item) => (
             <div className="">
               <div className="shadow-sm rounded-3xl py-4 pl-4  bg-linear-to-r from-[#085130] to-cyan-800 hover:scale-102 hover:shadow-lg hover:shadow-cyan-900 animation duration-300">
                 <div className="flex">
@@ -28,7 +49,7 @@ const SelectedGame = ({ library }) => {
                   </div>
                 </div>
                 <p className="text-2xl font-bold mt-3">
-                  $5{' '}
+                  ${item.price}
                   <i className="fa-solid fa-bag-shopping pl-3 text-amber-600"></i>
                 </p>
                 <div className="flex gap-4 mt-5">
@@ -49,6 +70,7 @@ const SelectedGame = ({ library }) => {
             </div>
           ))}
         </div>
+
         <div className="flex justify-center pt-10">
           <div className=" shadow-lg bg-[#094a2d] border border-green-900 w-100   rounded-2xl p-4">
             <div className="flex justify-between mb-2 text-xl border-b-2 border-b-[#0e5a38] pb-2">
@@ -56,11 +78,11 @@ const SelectedGame = ({ library }) => {
                 Subtotal{' '}
                 <i className="fa-solid fa-bag-shopping  text-amber-600"></i>
               </p>
-              <p>$40</p>
+              <p>${sum}</p>
             </div>
             <div className="flex justify-between text-xl font-bold">
               <p>Total</p>
-              <p>$40</p>
+              <p>${sum}</p>
             </div>
           </div>
         </div>
